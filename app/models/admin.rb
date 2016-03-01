@@ -9,4 +9,10 @@ class Admin < ActiveRecord::Base
 
   #admin has many blogs
   has_many :blogs
+
+  #sign in confirming
+  def self.confirm(params)
+    @admin = Admin.find_by_id({email: params[:email]})
+    @admin.try(:authenticate, params[:password])
+  end
 end
