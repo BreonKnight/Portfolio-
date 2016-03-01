@@ -10,7 +10,6 @@ class AdminsController < ApplicationController
 
   def create
     admin_params = params.require(:admin).permit(:first_name, :last_name, :email, :github, :twitter, :city, :state, :password, :avatar)
-    
     @admin = Admin.create(admin_params)
     redirect_to root_path
   end
