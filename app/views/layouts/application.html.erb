@@ -3,10 +3,25 @@
 <head>
   <title>RailsWebsite</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="blue">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Breon Knight</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#!">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#!">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
   <% flash.each do |name, msg| %>
     <p>
       <small> <%= name.capitalize %>: <%= msg %> </small>
