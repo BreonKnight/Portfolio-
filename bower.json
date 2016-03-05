@@ -1,0 +1,22 @@
+{
+  "name": "rails_website",
+  "homepage": "https://github.com/BreonKnight/Portfolio-",
+  "authors": [
+    "Breon Knight <Breonknight7@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#^0.97.5"
+  }
+}

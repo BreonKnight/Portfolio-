@@ -1,0 +1,28 @@
+/*
+  * This is a manifest file that'll be compiled into application.css, which will include all the files
+  * listed below.
+  *
+  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+  *
+  * You're free to add application-wide styles to this file and they'll appear at the top of the
+  * compiled file, but it's generally better to create a new file per style scope.
+  *
+  *= require_self
+  *= require_tree .
+*/
+
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+@import 'materialize';
+
+body{
+  background: #00e6ff;
+  background: -moz-linear-gradient(left, #00e6ff 0%, #1de9b6 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #00e6ff), color-stop(100%, #1de9b6));
+  background: -webkit-linear-gradient(left, #00e6ff 0%, #1de9b6 100%);
+  background: -o-linear-gradient(left, #00e6ff 0%, #1de9b6 100%);
+  background: -ms-linear-gradient(left, #00e6ff 0%, #1de9b6 100%);
+  background: linear-gradient(to right, #00e6ff 0%, #1de9b6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e6ff', endColorstr='#1de9b6', GradientType=1 );
+}
