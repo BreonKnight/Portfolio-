@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsWebsite</title>
+  <title>Breon Knight</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="blue">
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Breon Knight</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#!">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="#!">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Breon Knight</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><%= link_to 'Blog', about_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Portfolio', about_path %></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><%= link_to 'Blog', about_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Portfolio', about_path %></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
   <% flash.each do |name, msg| %>
     <p>
       <small> <%= name.capitalize %>: <%= msg %> </small>
     </p>
   <% end %>
-<%= yield %>
+<main>
 
-
+  <%= yield %>
+</main>
+  <footer class="page-footer blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-github fa-2x"></i> Github</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-linkedin fa-2x"></i> LinkedIn</a></li>
+            <li><a class="grey-text text-lighten-3" href="mailto:breonknight7@gmail.com?Subject=Hi,%20Breon" target="_top"><i class="fa fa-envelope fa-2x"></i> Email Me</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-soundcloud fa-2x"></i> Soundcloud</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2016 Breon Knight
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: "static_pages#homepage"
+  get "/about", to: "static_pages#about"
 
   resources :admins do
     resources :blogs
