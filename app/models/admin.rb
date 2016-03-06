@@ -12,7 +12,7 @@ class Admin < ActiveRecord::Base
 
   #sign in confirming
   def self.confirm(params)
-    @admin = Admin.find_by_id({email: params[:email]})
+    @admin = Admin.find_by({email: params[:email]})
     @admin.try(:authenticate, params[:password])
   end
 end
