@@ -1,0 +1,15 @@
+<div class="container white">
+  <div class="row">
+    <div class="col s12">
+      <%= form_for @blog do |f| %>
+      <div>
+        <%= f.text_field :title, placeholder: "Title" %>
+      </div>
+      <div>
+        <%= f.text_area :body, placeholder: "Post" %>
+      </div>
+      <%= f.submit "Sign Up" %>
+      <% end %>
+    </div>
+  </div>
+</div>
