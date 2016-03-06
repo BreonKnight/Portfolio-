@@ -11,19 +11,32 @@
 </head>
 <body>
   <div class="navbar-fixed">
-    <nav class="black">
+    <nav class="blue">
       <div class="nav-wrapper">
         <a href="/" class="brand-logo">Breon Knight</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><%= link_to 'Blog', blog_path %></li>
-          <li><%= link_to 'About', about_path %></li>
-          <li><%= link_to 'Portfolio', portfolio_path %></li>
+          <% if current_admin %>
+            <li><%= link_to 'Blog', blog_path %></li>
+            <li><%= link_to 'About', about_path %></li>
+            <li><%= link_to 'Portfolio', portfolio_path %></li>
+            <li><%= link_to "Log Out", logout_path %></li>
+          <% else %>
+            <li><%= link_to 'Blog', blog_path %></li>
+            <li><%= link_to 'About', about_path %></li>
+            <li><%= link_to 'Portfolio', portfolio_path %></li>
+          <% end %>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><%= link_to 'Blog', blog_path %></li>
-          <li><%= link_to 'About', about_path %></li>
-          <li><%= link_to 'Portfolio', portfolio_path %></li>
+          <% if current_admin %>
+            <li><%= link_to 'Blog', blog_path %></li>
+            <li><%= link_to 'About', about_path %></li>
+            <li><%= link_to 'Portfolio', portfolio_path %></li>
+          <% else %>
+            <li><%= link_to 'Blog', blog_path %></li>
+            <li><%= link_to 'About', about_path %></li>
+            <li><%= link_to 'Portfolio', portfolio_path %></li>
+          <% end %>
         </ul>
       </div>
     </nav>
