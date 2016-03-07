@@ -1,5 +1,5 @@
-<div class="container white">
-  <div class="row">
+<div class="container blogs">
+  <div class="row white">
     <div class="col s12">
       <%= form_for @blog do |f| %>
       <div>
@@ -8,7 +8,7 @@
       <div>
         <%= f.text_area :body, placeholder: "Post" %>
       </div>
-      <%= f.submit "Sign Up" %>
+      <%= f.submit "New Post", class: "btn blue" %>
       <% end %>
     </div>
   </div>
