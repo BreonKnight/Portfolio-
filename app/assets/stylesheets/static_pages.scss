@@ -9,14 +9,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 10px;
-  margin: .4px;
 }
 
 h4.center-align.card.blue.white-text.z-depth-2{
   margin: 10px;
-  -webkit-filter: none;
-  filter: none;;
-
 }
 
 .container.blog-preview.blue{
@@ -46,4 +42,8 @@ p.card.blue.white-text.z-depth-3{
 
 p.scard.blue.white-text.z-depth-3{
   padding: 10px;
+}
+
+a.brand-logo{
+  padding-left: 10px;
 }

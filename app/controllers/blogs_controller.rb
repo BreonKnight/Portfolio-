@@ -5,14 +5,12 @@ class BlogsController < ApplicationController
   end
 
   def new
+    if current_admin == nil
+      redirect_to root_path
+    else
     @blog = Blog.new
     render :new
-  end
-
-  def show
-    blog_id = params[:id]
-    @blog = Blog.find_by_id(blog_id)
-    render :show
+    end
   end
 
   def create
