@@ -1,7 +1,6 @@
 class AdminsController < ApplicationController
   def index
-    @admins = Admin.all
-    render :index
+    @admin = Admin.find_by_id(params[:id])
   end
 
   def show

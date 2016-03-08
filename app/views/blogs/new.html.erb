@@ -1,4 +1,7 @@
 <div class="container blogs">
+  <div class="row card white hero">
+    <h4 class=" center-align card blue white-text z-depth-2 ">New Blog Post</h4>
+  </div>
   <div class="row white">
     <div class="col s12">
       <%= form_for @blog do |f| %>
@@ -10,6 +13,5 @@
       </div>
       <%= f.submit "New Post", class: "btn blue" %>
       <% end %>
-    </div>
   </div>
 </div>
