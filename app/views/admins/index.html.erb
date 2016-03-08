@@ -8,6 +8,8 @@
       <h4 class="white-text"> <%= blog.title %> <small></small></h4>
       <p class="white-text">
         <%= blog.body %>
+        <br>
+        <small class="blue"> <%= blog.created_at.strftime("%m-%d-%Y") %> </small>
       </p>
     </div>
     <% end %>
