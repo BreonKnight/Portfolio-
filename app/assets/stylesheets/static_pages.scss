@@ -15,12 +15,11 @@ h4.center-align.card.blue.white-text.z-depth-2{
   margin: 10px;
 }
 
-.container.blog-preview.blue{
-  width: 100%;
+.container.blog-preview{
+  margin-top: 50px;
 }
 
 .row.card.white.hero{
-  width: 50%;
   margin: 0 auto 10px;
 }
 .container.blog-preview.white{
@@ -46,4 +45,21 @@ p.scard.blue.white-text.z-depth-3{
 
 a.brand-logo{
   padding-left: 10px;
+}
+
+p.white{
+  padding: 5px;
+}
+
+h5.card.blue.white-text{
+  padding: 5px;
+}
+
+.container.blog-preview.blue{
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+h5.card.blue.white-text{
+  border: solid;
 }

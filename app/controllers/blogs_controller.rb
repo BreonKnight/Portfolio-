@@ -13,6 +13,12 @@ class BlogsController < ApplicationController
     end
   end
 
+  def show
+    blog_id = params[:id]
+    @blogs = Blog.find_by_id(blog_id)
+    render :show
+  end
+
   def create
     blog_params = params.require(:blog).permit(:title, :body, :avatar).merge(admin_id: current_admin.id)
     @blog = Blog.create(blog_params)
@@ -22,7 +28,7 @@ class BlogsController < ApplicationController
   def edit
     blog_id = params[:id]
     @blog = Blog.find_by_id(blog_id)
-    render :show
+    render :edit
   end
 
   def update
@@ -31,7 +37,6 @@ class BlogsController < ApplicationController
     blog_params = params.require(:blog).permit(:title, :body, :avatar)
     blog.update_attributes(blog_params)
     redirect_to root_path
-    render :update
   end
 
   def destroy

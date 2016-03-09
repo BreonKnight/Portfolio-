@@ -4,9 +4,13 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about"
   get "/portfolio", to: "static_pages#portfolio"
   get "/blog", to: "admins#index"
-  
+  get	"/blog/:id", to: "blogs#show"
+  get	"/blog/:id/edit", to: "blogs#edit"
+  patch "/blog/:id/", to: "blogs#update", as: "patch"
+
+
   resources :admins
-  resources :blogs, except: [:show, :index]
+  resources :blogs
 
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"

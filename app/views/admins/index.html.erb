@@ -5,7 +5,9 @@
   <div class="row">
     <% blog_posts.each do |blog| %>
     <div class="col s12 post">
+      <%= link_to blog_path(blog_entry(blog)).gsub!(/[."]/,'/') do %>
       <h4 class="white-text"> <%= blog.title %> <small></small></h4>
+      <% end %>
       <p class="white-text">
         <%= blog.body %>
         <br>
