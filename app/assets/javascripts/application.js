@@ -13,6 +13,5 @@
 //= require jquery
 //= require materialize-sprockets
 //= require jquery_ujs
-//= require turbolinks
 //= require app
 //= require_tree .

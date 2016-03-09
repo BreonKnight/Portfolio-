@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>Breon Knight</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -26,17 +26,23 @@
             <li><%= link_to 'Blog', blog_path %></li>
             <li><%= link_to 'About', about_path %></li>
             <li><%= link_to 'Portfolio', portfolio_path %></li>
+            <li><a href="/BreonKnightResume.pdf">Resume</a></li>
+</li>
           <% end %>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <% if current_admin %>
-            <li><%= link_to 'Blog', blog_path %></li>
-            <li><%= link_to 'About', about_path %></li>
-            <li><%= link_to 'Portfolio', portfolio_path %></li>
-          <% else %>
-            <li><%= link_to 'Blog', blog_path %></li>
-            <li><%= link_to 'About', about_path %></li>
-            <li><%= link_to 'Portfolio', portfolio_path %></li>
+          <li><%= link_to 'Blog', blog_path %></li>
+          <li><%= link_to 'New Blog Post', new_blog_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Portfolio', portfolio_path %></li>
+          <li><%= link_to "Log Out", logout_path %></li>
+        <% else %>
+          <li><%= link_to 'Blog', blog_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Portfolio', portfolio_path %></li>
+          <li><a href="/BreonKnightResume.pdf">Resume</a></li>
+</li>
           <% end %>
         </ul>
       </div>
