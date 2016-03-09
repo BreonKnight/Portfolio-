@@ -1,1 +1,19 @@
-<h1>Welcome to my site <small></small></h1>
+<div class="container blogs">
+  <div class="row card white hero">
+    <h4 class=" center-align card blue white-text z-depth-2 ">Blog</h4>
+  </div>
+  <div class="row">
+    <% blog_posts.each do |blog| %>
+    <div class="col s12 post">
+      <%= link_to blog_path(blog_entry(blog)).gsub!(/[."]/,'/') do %>
+      <h4 class="white-text"> <%= blog.title %> <small></small></h4>
+      <% end %>
+      <p class="white-text">
+        <%= blog.body %>
+        <br>
+        <small class="blue"> <%= blog.created_at.strftime("%m-%d-%Y") %> </small>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container pic">
+  <div class="card white hero">
+    <h4 class=" center-align card blue white-text z-depth-2 ">Welcome</h4>
+  </div>
+  <div class="row">
+    <div class="col s6 card white">
+      <p class="card blue white-text z-depth-3">
+        My name is Breon, I'm a Software Engineer from Charm City: Baltimore, Maryland.
+        My passions lie in creating functional applications. My goals are to create applications that people
+        want to use in the most simpliest manner. I'm currently residing in the Berkeley, California working freelance.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s6 offset-s6  card white">
+      <p class="card blue white-text z-depth-3">
+         Aside from being a Software Engineer I enjoy playing the piano and reading manga. A big fan of the Golden State Warriors! Go Warriors!!
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container blog-preview">
+  <div class="card white hero">
+    <h4 class="center-align card blue white-text z-depth-2">Recent Blog Posts</h4>
+  </div>
+  <div class="row">
+    <% last_five_posts.each do |post| %>
+    <%= link_to blog_path(blog_entry(post)).gsub!(/[."]/,'/') do %>
+    <div class="col s6">
+      <h5 class=" card blue white-text"><%= post.title %> <br> <small class="black-text"><%= truncate(post.body, :length => 50) -%></small></h5>
+      <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

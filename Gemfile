@@ -28,6 +28,10 @@ gem "paperclip", "~> 4.3"
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'materialize-sass', '~> 0.96.1'
+
+gem 'sass-rails', '~> 5.0'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
