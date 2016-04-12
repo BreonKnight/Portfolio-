@@ -74,7 +74,7 @@
           <% last_five_posts.each do |post| %>
           <%= link_to blog_path(blog_entry(post)).gsub!(/[."]/,'/') do %>
           <div class="col s6">
-            <h5 class="card blue white-text"><%= post.title %> <br><small class="white-text"><%= truncate(post.body, :length => 50) -%></h5>
+            <h5 class="card blue white-text"><%= post.title %> <br><small class="white-text"><%= truncate(post.body, :length => 50) -%></small></h5>
             <% end %>
           </div>
           <% end %>
