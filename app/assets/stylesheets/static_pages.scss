@@ -101,3 +101,43 @@ p{
 img.card.responsive-img{
   width: 100%;
 }
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.grad-text{
+  background: -moz-linear-gradient(left, rgba(33, 150, 243, 0.02) 0%, rgba(24, 72, 150, 0.2) 100%);
+  background: -webkit-linear-gradient(left, rgba(33, 150, 243, 0.02) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to right, rgba(0, 142, 255, 0.02) 0%, rgba(0, 0, 0, 0.2) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#052196f3', endColorstr='#33184896',GradientType=1 );
+}

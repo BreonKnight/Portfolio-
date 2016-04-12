@@ -1,32 +1,92 @@
-<div class="container blue">
-  <div class="row">
-    <div class="col s6 card white">
-      <p class="card blue white-text z-depth-3">
-        My name is Breon, I'm a Software Engineer from Charm City: Baltimore, Maryland.
-        My passions lie in creating functional applications. My goals are to create applications that people
-        want to use in the most simpliest manner. I'm currently residing in the Berkeley, California working freelance.
-      </p>
+<div id="index-banner" class="parallax-container grad-text">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center">Breon Knight</h1>
+      <div class="row center">
+        <h5 class="header col s12 light"> Welcome to my site</h5>
+      </div>
+      <div class="row center">
+        <a href="http://breonknight.com/portfolio" id="download-button" class="btn-large waves-effect blue">Projects</a>
+      </div>
+      <br><br>
+
     </div>
   </div>
-  <div class="row">
-    <div class="col s6 offset-s6 card white">
-      <p class="card blue white-text z-depth-3">
-         Aside from being a Software Engineer I enjoy playing the piano and reading manga. A big fan of the Golden State Warriors! Go Warriors!!
-      </p>
+  <div class="parallax grad-text"><img class="grad-text" src="/images/arizona.jpg" alt="Unsplashed background img 1"></div>
+</div>
+
+
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center blue-text"><i class="material-icons">flash_on</i></h2>
+          <h5 class="center">Fast Learner</h5>
+
+          <p class="light">
+                  My passions lie in creating functional applications. My goals are to create applications that people
+                  want to use in the most simpliest manner.</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center blue-text"><i class="material-icons">code</i></h2>
+          <h5 class="center">Technologies</h5>
+
+          <p class="light">Java, Swift, Javascript, Ruby, Ruby on Rails, CSS3, HTML5, Node.js, Express.js, Angular,
+            MongoDB, PostgresSQL, and SQL </p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center blue-text"><i class="material-icons">location_on</i></h2>
+          <h5 class="center">Location</h5>
+
+          <p class="light">I'm from Charm City: Baltimore, Maryland. I'm currently residing in the Berkeley, California working freelance.</p>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
-<div class="container blog-preview">
-  <div>
-    <h4 class="center-align blue-text">Recent Posts</h4>
-  </div>
-  <div class="row">
-    <% last_five_posts.each do |post| %>
-    <%= link_to blog_path(blog_entry(post)).gsub!(/[."]/,'/') do %>
-    <div class="col s6">
-      <h5 class=" card blue white-text"><%= post.title %> <br><small class="white-text"><%= truncate(post.body, :length => 50) -%></h5>
-      <% end %>
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row">
+        <h5 class="header col s12 light">Passionate about UI sensibilities</h5>
       </div>
-    <% end %>
+    </div>
   </div>
+  <div class="parallax grad-text"><img src="/images/nyc.jpg" alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+  <div class="section">
+    <h3 class="header col s12 light">Recent Posts</h3>
+    <div class="row">
+          <% last_five_posts.each do |post| %>
+          <%= link_to blog_path(blog_entry(post)).gsub!(/[."]/,'/') do %>
+          <div class="col s6">
+            <h5 class="card blue white-text"><%= post.title %> <br><small class="white-text"><%= truncate(post.body, :length => 50) -%></h5>
+            <% end %>
+          </div>
+          <% end %>
+      </div>
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+
+    </div>
+  </div>
+  <div class="parallax grad-text"><img src="/images/japan.jpg" alt="Unsplashed background img 3"></div>
 </div>

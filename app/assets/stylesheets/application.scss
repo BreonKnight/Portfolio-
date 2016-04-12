@@ -24,14 +24,11 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: $black
 }
 
 main {
   flex: 1 0 auto;
-  background-color: $white;
   margin-top: 1px;
-
 }
 
 input.btn.blue{
