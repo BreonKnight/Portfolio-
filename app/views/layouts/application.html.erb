@@ -18,16 +18,16 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <% if current_admin %>
-            <li><%= link_to 'Blog', blog_path %></li>
-            <li><%= link_to 'New Blog Post', new_blog_path %></li>
-            <li><%= link_to 'About', about_path %></li>
-            <li><%= link_to 'Portfolio', portfolio_path %></li>
-            <li><%= link_to "Log Out", logout_path %></li>
+            <li><%= link_to 'Blog', blog_path, class: "top-link" %></li>
+            <li><%= link_to 'New Blog Post', new_blog_path, class: "top-link" %></li>
+            <li><%= link_to 'About', about_path, class: "top-link" %></li>
+            <li><%= link_to 'Portfolio', portfolio_path, class: "top-link" %></li>
+            <li><%= link_to "Log Out", logout_path, class: "top-link" %></li>
           <% else %>
-            <li><%= link_to 'Blog', blog_path %></li>
-            <li><%= link_to 'About', about_path %></li>
-            <li><%= link_to 'Portfolio', portfolio_path %></li>
-            <li><a href="/BreonKnightResume.pdf">Resume</a></li>
+            <li><%= link_to 'Blog', blog_path, class: "top-link" %></li>
+            <li><%= link_to 'About', about_path, class: "top-link" %></li>
+            <li><%= link_to 'Portfolio', portfolio_path, class: "top-link" %></li>
+            <li><a href="/BreonKnightResume.pdf" class="top-link">Resume</a></li>
 </li>
           <% end %>
         </ul>
